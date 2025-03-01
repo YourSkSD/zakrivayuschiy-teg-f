@@ -1,1 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: Inter-Variable;
+  --accent-font: PressStart2P;
+  --main-font-wght: 400;
+  --accent-font-wght: 700;
+  --text-font-size: 1.125rem;
+  --topic-font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
+  --topic-note-font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+  /* --topic-line-height: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
+  --topic-note-line-height: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem); */
+}

@@ -11,6 +11,112 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
+  background-image: repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to left, transparent 0px 2px, #d3d3d3 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0%, #1a1a1a 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: var(--main-font, fantasy);
+  font-size: var(--text-font-size, 18px);
+  font-variation-settings: "wght" var(--main-font-wght, 400);
+  /* background-repeat: no-repeat; */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* transform: translateX(calc(50vw - 50%)); */
+  margin: 100px auto;
+  /* padding: 128px 120.5px; */
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem)
+    clamp(0.875rem, -1.4687rem + 9.9996vw, 7.531rem);
+  gap: 20px;
+  background: white;
+  font-family: var(--accent-font, fantasy);
+  border: 2px solid #000;
+}
+
+.header_topic {
+  text-transform: uppercase;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: var(--topic-font-size, 65px);
+  /* line-height: var(--topic-line-height, 65px); */
+}
+
+.header_topic_note {
+  text-transform: uppercase;
+  font-weight: inherit;
+  font-family: inherit;
+  text-align: center;
+  font-size: var(--topic-note-font-size, 23px);
+  /* line-height: var(--topic-note-line-height, 23px); */
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
+  inline-size: clamp(23.438rem, 16.2859rem + 30.5157vw, 43.75rem);
+}
+
+.cards__item {
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #000;
+  background: #fff;
+  gap: 25px;
+}
+
+.card__title {
+  font-size: var(--text-font-size, 18px);
+  font-variation-settings: "wght" 700;
+  padding: 0 10px;
+  font-size: inherit;
+}
+
+.card__image {
+  display: block;
+  outline: 2px solid #000;
+  /* outline-offset: -2px; */
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+}
+
+.no_effect {
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  font-size: inherit;
+  font-weight: inherit;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons {
+  appearance: none;
+  display: flex;
+  justify-content: end;
+  margin: 0 25px 25px auto;
 }
