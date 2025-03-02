@@ -89,16 +89,51 @@
 .card__title {
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" 700;
-  padding: 0 10px;
+  padding: 5px 10px;
   font-size: inherit;
+  border-bottom: 2px solid #000;
+}
+
+.card__image-box {
+  position: relative;
 }
 
 .card__image {
   display: block;
+  /* border: 2px solid #000; */
   outline: 2px solid #000;
   /* outline-offset: -2px; */
   inline-size: 100%;
   aspect-ratio: 1/1;
+  object-fit: cover;
+  /* object-position: calc(100% + 20px) calc(100% + 6px); */
+  object-position: bottom right;
+  position: relative;
+  background-color: transparent;
+}
+
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  /* margin: 25px 25px 0 0; */
+  pointer-events: none;
+  font-weight: inherit;
+  font-size: var(--small-font-size, 0.875rem);
+  font-family: var(--accent-font, fantasy);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.image__label_html::after {
+  content: "&lt;/HTML&gt;";
+}
+
+@supports (text-stroke: 1px #fff) {
+  .watermark {
+    text-stroke: 1px #fff;
+  }
 }
 
 .no_effect {
@@ -107,7 +142,7 @@
 .card__description {
   display: flex;
   flex-direction: column;
-  padding: 0 25px;
+  padding: 2px 25px 0;
   font-size: inherit;
   font-weight: inherit;
   justify-content: center;
@@ -115,8 +150,62 @@
 }
 
 .buttons {
-  appearance: none;
   display: flex;
   justify-content: end;
+  /* align-content: center; */
   margin: 0 25px 25px auto;
+  gap: 6px;
 }
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #000;
+  text-align: center;
+  font-family: var(--accent-font, fantasy);
+  font-size: var(--small-font-size, 0.875rem);
+  font-weight: inherit;
+}
+
+.card__icon-button {
+  padding: 0 0 0px 0;
+  width: 39px;
+  height: 38px;
+  border: none;
+}
+
+.card__like-button {
+  /* padding: 10px 35px; */
+  /* padding: 10px 0; */
+  inline-size: 130px;
+}
+
+.button__text {
+}
+
+.card__save_memory-button {
+  display: flex;
+  align-items: center;
+  margin: 50px auto 100px auto;
+  background-color: #fff;
+  padding: 13.5px 21px 13.5px 19px;
+}
+
+.icon__floppy {
+  width: 22px;
+  height: 22px;
+  margin-inline-end: 8px;
+  margin-block-start: 2px;
+}
+
+.dialog__save[open]::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+body:has(.dialog__save[open]) {
+  overflow: hidden;
+}
+
+/* .no_effect {
+  filter: blur(5px);
+} */
