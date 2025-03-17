@@ -8,6 +8,11 @@
   --text-font-size: 1.125rem;
   --topic-font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
   --topic-note-font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+  --stroke-color: #fff;
+  --accent-color: #000;
+  --accent-heart-color: #ff0000;
+  --accent-heart-contour-color: #000;
+
   /* --topic-line-height: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
   --topic-note-line-height: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem); */
 }
