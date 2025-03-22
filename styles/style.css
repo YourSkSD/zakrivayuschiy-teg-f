@@ -199,19 +199,6 @@
   inline-size: 130px;
 }
 
-.button__text {
-  /* opacity: 1; */
-  /* color: red; */
-  /* z-index: 2; */
-}
-
-.button:hover .button__text {
-  /* opacity: 0; */
-  /* transition: opacity 0.5s ease-in-out; */
-  /* color: red; */
-  /* z-index: 2; */
-}
-
 .card__save_memory-button {
   display: flex;
   position: relative;
