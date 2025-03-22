@@ -29,6 +29,7 @@
   font-family: var(--main-font, fantasy);
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" var(--main-font-wght, 400);
+  overflow: auto;
   /* background-repeat: no-repeat; */
 }
 
@@ -132,9 +133,13 @@
   /* -webkit-text-stroke: 1px var(--stroke-color, #fff); */
 }
 
-@supports (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
+@supports (
+  (-webkit-text-stroke: 1px var(--stroke-color, #fff)) or
+    (text-stroke: 1px var(--stroke-color, #fff))
+) {
   .watermark {
     text-shadow: none;
+    text-stroke: 1px var(--stroke-color, #fff);
     -webkit-text-stroke: 1px var(--stroke-color, #fff);
   }
 }
