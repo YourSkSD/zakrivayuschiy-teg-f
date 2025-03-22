@@ -70,8 +70,8 @@
   transition: fill 0.1s linear;
 }
 
-.heart {
-}
+/* .heart {
+} */
 
 .like-icon.is-liked .heart {
   transform-origin: center;
@@ -100,5 +100,5 @@
   }
 }
 
-.card__icon-button:active {
-}
+/* .card__icon-button:active {
+} */
