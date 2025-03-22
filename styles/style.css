@@ -90,7 +90,7 @@
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" 700;
   padding: 5px 10px;
-  font-size: inherit;
+  /* font-size: inherit; */
   border-bottom: 2px solid #000;
 }
 
@@ -286,7 +286,6 @@ body:has(.dialog__save[open]) {
   font-family: var(--accent-font, fantasy);
   font-size: var(--small-font-size, 0.875rem);
   font-weight: inherit;
-  font-size: var(--small-font-size, 0.875rem);
   line-height: 90%;
   letter-spacing: 0%;
   text-transform: uppercase;
