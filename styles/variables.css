@@ -6,6 +6,7 @@
   --accent-font-wght: 700;
   --small-font-size: 0.875rem;
   --text-font-size: 1.125rem;
+  --line-height: 1.3125rem;
   --topic-font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
   --topic-note-font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
   --stroke-color: #fff;

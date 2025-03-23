@@ -30,6 +30,7 @@
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" var(--main-font-wght, 400);
   overflow: auto;
+  line-height: var(--line-height, 1.3125rem);
   /* background-repeat: no-repeat; */
 }
 
@@ -115,7 +116,7 @@
 .watermark {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: clamp(0.688rem, 0.3799rem + 1.3146vw, 1.563rem);
   /* margin: 25px 25px 0 0; */
   pointer-events: none;
   font-weight: inherit;
@@ -153,6 +154,7 @@
   font-weight: inherit;
   justify-content: center;
   gap: 20px;
+  line-height: var(--line-height, 1.3125rem);
 }
 
 .buttons {
