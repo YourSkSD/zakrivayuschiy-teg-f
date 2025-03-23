@@ -25,7 +25,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <a href="" rel="home" class="header_topic_logo">&lt;/HTML&gt;</a>
+      <span class="header_topic_logo">&lt;/HTML&gt;</span>
       <h1 class="header_topic_note">закрывающий тег</h1>
     </header>
     <main>
@@ -60,11 +60,7 @@
               направлении...
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -100,11 +96,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -141,11 +133,7 @@
               что-то очень ценное.
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -181,11 +169,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -219,11 +203,7 @@
               проектов - новые вызовы.
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -259,11 +239,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -299,11 +275,7 @@
               разрываясь. Благо было кому помочь)
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -339,11 +311,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -381,11 +349,7 @@
               получения ещё больших знаний и реализации новых проектов.
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -421,11 +385,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -461,11 +421,7 @@
               прекращается...
             </p>
             <div class="buttons">
-              <button
-                type="button"
-                type="button"
-                class="button card__icon-button"
-              >
+              <button type="button" class="button card__icon-button">
                 <svg
                   class="like-icon"
                   viewBox="-2 -1 43 38"
@@ -501,11 +457,7 @@
                   </defs> -->
                 </svg>
               </button>
-              <button
-                type="button"
-                type="button"
-                class="button card__like-button"
-              >
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -670,25 +622,28 @@
         >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
-        <p class="button__text">Сохранить на память</p>
+        <span class="button__text">Сохранить на память</span>
       </button>
     </main>
     <script src="./scripts/like.js" defer></script>
     <dialog id="dialog__save" class="dialog__save">
-      <div class="dialog__text_box">
-        <svg
-          class="dialog__icon__floppy"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <p class="dialog__save_text">Вставьте дискету, чтобы продолжить</p>
-      </div>
+      <form id="save_memory" class="form__save" method="dialog">
+        <div class="dialog__text_box">
+          <svg
+            class="dialog__icon__floppy"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <p class="dialog__save_text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+      </form>
       <button
         class="button dialog__button_save_close"
-        onclick="window['dialog__save'].close()"
+        form="save_memory"
+        type="submit"
       >
         <span class="button_save_close__text">OK</span>
       </button>

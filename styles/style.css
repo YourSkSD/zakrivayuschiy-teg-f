@@ -75,9 +75,6 @@
   inline-size: clamp(23.438rem, 16.2859rem + 30.5157vw, 43.75rem);
 }
 
-/* .cards__item {
-} */
-
 .card {
   display: flex;
   flex-direction: column;
@@ -147,9 +144,6 @@
 .image__label_html::after {
   content: "&lt;/HTML&gt;";
 }
-
-/* .no_effect {
-} */
 
 .card__description {
   display: flex;
@@ -257,7 +251,7 @@
   font-weight: inherit;
   font-size: var(--small-font-size, 0.875rem);
   line-height: 150%;
-  letter-spacing: 0rem;
+  letter-spacing: 0em;
   text-transform: uppercase;
   word-wrap: break-word;
   overflow: hidden;
@@ -279,11 +273,36 @@ body:has(.dialog__save[open]) {
   font-size: var(--small-font-size, 0.875rem);
   font-weight: inherit;
   line-height: 90%;
-  letter-spacing: 0rem;
+  letter-spacing: 0em;
   text-transform: uppercase;
 }
 
-.dialog__button_save_close:focus-visible,
+.button:not(.card__icon-button):focus-visible {
+  outline: none;
+  -webkit-text-stroke: none;
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.button:not(.card__icon-button)::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  block-size: 100%;
+  inline-size: 0%;
+  inset: 0 0;
+  background-color: var(--stroke-color, #fff);
+  mix-blend-mode: difference;
+  transition: inline-size 0.5s ease-in-out;
+}
+
+.button:not(.card__icon-button):hover::after {
+  inline-size: 100%;
+  mix-blend-mode: difference;
+  transition: inline-size 0.5s ease-in-out;
+}
+
+/* .dialog__button_save_close:focus-visible,
 .card__like-button:focus-visible,
 .card__save_memory-button:focus-visible {
   outline: none;
@@ -312,7 +331,7 @@ body:has(.dialog__save[open]) {
   inline-size: 100%;
   mix-blend-mode: difference;
   transition: inline-size 0.5s ease-in-out;
-}
+} */
 
 /* .dialog__button_save_close::after,
 .card__like-button::after,
