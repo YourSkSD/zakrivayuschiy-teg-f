@@ -1,7 +1,7 @@
 @media (width < 376px) {
   .card__icon-button {
     padding: 0px;
-    width: 39px;
+    width: 43px;
     height: 38px;
     border: none;
   }
@@ -12,7 +12,7 @@
     align-items: center;
     margin: 50px auto 100px auto;
     background-color: #fff;
-    padding: 13.5px 21px 13.5px 19px;
+    padding: 14.5px 20px;
   }
 
   .icon__floppy {
