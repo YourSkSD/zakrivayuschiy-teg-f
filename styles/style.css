@@ -26,7 +26,7 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  font-family: var(--main-font, fantasy);
+  font-family: var(--main-font, sans-serif);
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" var(--main-font-wght, 400);
   overflow: auto;
@@ -45,11 +45,11 @@
     clamp(0.875rem, -1.4687rem + 9.9996vw, 7.531rem);
   gap: 20px;
   background: white;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font, sans-serif);
   border: 2px solid #000;
 }
 
-.header_topic {
+.header_topic_logo {
   text-transform: uppercase;
   font-weight: inherit;
   font-family: inherit;
@@ -123,7 +123,7 @@
   pointer-events: none;
   font-weight: inherit;
   font-size: var(--small-font-size, 0.875rem);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font, sans-serif);
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -175,7 +175,7 @@
   background-color: transparent;
   border: 2px solid #000;
   text-align: center;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font, sans-serif);
   font-size: var(--small-font-size, 0.875rem);
   font-weight: inherit;
 }
@@ -253,18 +253,18 @@
 .dialog__save_text {
   display: inline-flex;
   min-inline-size: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font, sans-serif);
   font-weight: inherit;
   font-size: var(--small-font-size, 0.875rem);
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0rem;
   text-transform: uppercase;
   word-wrap: break-word;
   overflow: hidden;
 }
 
 .dialog__save[open]::backdrop {
-  backdrop-filter: blur(10px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 body:has(.dialog__save[open]) {
@@ -275,11 +275,11 @@ body:has(.dialog__save[open]) {
   inline-size: 100%;
   padding: 10.5px 0;
   position: relative;
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font, sans-serif);
   font-size: var(--small-font-size, 0.875rem);
   font-weight: inherit;
   line-height: 90%;
-  letter-spacing: 0%;
+  letter-spacing: 0rem;
   text-transform: uppercase;
 }
 
@@ -366,9 +366,3 @@ body:has(.dialog__save[open]) {
 .picture_filter_invert {
   filter: invert(0.2);
 }
-
-/* .card__like-button:hover .button__text,
-.card__save_memory-button:hover .button__text {
-  color: var(--accent-color, #000);
-  transition: color 0.5s ease-in-out;
-} */

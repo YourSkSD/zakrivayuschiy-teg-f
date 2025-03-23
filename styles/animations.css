@@ -70,9 +70,6 @@
   transition: fill 0.1s linear;
 }
 
-/* .heart {
-} */
-
 .like-icon.is-liked .heart {
   transform-origin: center;
   animation: heart-beat 0.3s ease-in 0.1s 1 normal backwards;
@@ -99,6 +96,3 @@
     opacity: 1;
   }
 }
-
-/* .card__icon-button:active {
-} */
