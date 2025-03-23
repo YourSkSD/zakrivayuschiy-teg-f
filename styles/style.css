@@ -30,7 +30,8 @@
   font-size: var(--text-font-size, 18px);
   font-variation-settings: "wght" var(--main-font-wght, 400);
   overflow: auto;
-  line-height: var(--line-height, 1.3125rem);
+  /* overflow: hidden; */
+  /* line-height: var(--line-height, 1.3125rem); */
   /* background-repeat: no-repeat; */
 }
 
@@ -161,7 +162,7 @@
   display: flex;
   justify-content: end;
   /* align-content: center; */
-  margin: 0 25px 25px auto;
+  margin: 0px 25px 25px auto;
   gap: 4px;
 }
 
@@ -201,7 +202,7 @@
   align-items: center;
   margin: 50px auto 100px auto;
   background-color: #fff;
-  padding: 13.5px 21px 13.5px 19px;
+  padding: 13.5px 19.5px;
 }
 
 .icon__floppy {
